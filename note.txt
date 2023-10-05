@@ -1,0 +1,9 @@
+RewriteRule . index.php [L] => any character , to index.php
+
+router.php
+1. altoroute loading
+2. require_once in init.php
+3. instantiate Altoroute
+4. map()
+
+map("method","router","target","route name")
