@@ -6,4 +6,23 @@ router.php
 3. instantiate Altoroute
 4. map()
 
-map("method","router","target","route name")
+RouteDispatcher.php
+1. create RouteDispatcher Class
+2. write require_once in ini.php
+3. instantiate this in router.php
+
+Requiring Philo Laravel Blade
+create helper.php in functions file
+create view function in helper.php
+create welcome.blade.php in views
+
+Requiring illuminate/database
+Create Database.php in classes
+write database credential at .env file
+use illuminate\Database\Capsule\Manager as Capsule(nick name)
+
+Requiring phpMailler
+
+is_callable function need array value
+is_callable([class , method])
+map("method","router/[data-type: params ]","target","route name")

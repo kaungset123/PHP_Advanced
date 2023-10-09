@@ -1,13 +1,13 @@
 <?php
 
+
+use App\Routing\RouteDispatcher;
+
 $router = new AltoRouter();
 
 $router->setBasePath("/E-Commerce/public");
-$router->map("GET","/","to the paradise","Home Route");
-$match = $router->match();
+$router->map("GET","/","App\controllers\IndexController@show","Home Route");
+$router->map("GET","/admin/category","App\controllers\CategoryController@index","Category Create"); // for show
+$router->map("POST","/admin/category","App\controllers\CategoryController@store","Category Store"); // for button click
 
-if($match){
-    echo "<pre>".print_r($match,true)."</pre>";
-}else{
-    echo "not Match";
-}
+new RouteDispatcher($router); ## instantiating RouteDispatcher class
