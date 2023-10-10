@@ -1,9 +1,16 @@
 <?php
 // echo "hello world";
 
+use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
 use App\classes\Mail;
+use App\classes\Session;
 use Illuminate\Database\Capsule\Manager as Capsule;
 require_once "../bootstrap/init.php";
+
+$whoops = new Run();
+$whoops->pushHandler(new PrettyPageHandler());
+$whoops->register();
 
 // echo getenv("APP_NAME") . "<br>";  ## defined static member
 // echo getenv("APP_DEVLOPER") . "<br>";
@@ -24,11 +31,9 @@ $data = [
     "to"=> "clanc6581@gmail.com",
     "to_name"=>"kaungsetnaing",
     "content"=> $content,
-    "imgsrc"=> '<img src="cid:coding">',
-    "img"=> 'URL_ROOT . "assets/images/coding.png"',
     "subject"=> "Test email from php advanced",
     "filename"=>"welcome",
-    "img_link"=>"https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbackground-image&psig=AOvVaw2t9nbGEJc7h5qzsllOtLfX&ust=1696912526004000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMCk2feR6IEDFQAAAAAdAAAAABAJ"
+    "img_link"=>"https://d150u0abw3r906.cloudfront.net/wp-content/uploads/2022/08/image9-41.png"
 ];
 
 
@@ -38,3 +43,11 @@ $data = [
 // else 
 //     echo "<h1>mail sending fail</h1>";
 // uoyp xkzg smqy hsnz
+
+Session::remove("token");
+// Session::add("name","testerrr");
+// Session::get("name");
+// Session::replace("name","testerrr03");
+// Session::get("name");
+
+// Session::flash("creat_success");

@@ -35,7 +35,7 @@ class Mail{
         $this->mail->addAddress($data["to"]);
         $this->mail->Subject = $data["subject"];
         $this->mail->Body = make($data["filename"],$data);
-
+        $this->mail->addEmbeddedImage('image9-41.png','lolipop');
         return $this->mail->send();
     }
 }

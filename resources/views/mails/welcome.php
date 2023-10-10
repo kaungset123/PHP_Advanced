@@ -8,7 +8,6 @@
 </head>
 <body>
     <h1 style="padding: 10px; background:red; text-align:center;">HTML mail is sent to you</h1>
-    <img src="<?php echo $img ;?>">
-  
+    <img src="<?php echo $img_link ;?>" alt="">
 </body>
 </html>

@@ -1,18 +1,68 @@
+*{
+    font-size: 15px;
+}
+a{
+    text-decoration: none;
+}
 #cat{
     color: rgb(247, 246, 248);
 }
 
 body{
-    background:rebeccapurple;
+    background:#FABBF9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#cat_input{
-    background-color: gray;
-    color: red;
-}
-::placeholder{
-    color: red;
-}
 #button{
     background-color: rgb(50, 86, 245);
 }
+#nav_div{
+    border-bottom: 0.5px solid white;
+}
+
+nav{
+    padding: 16px !important;
+}
+
+#create_button,#search_button{
+    background: rgb(14, 14, 116);
+}
+#search_button:active {
+  transform: translateY(4px);
+  transition: 0.5s;
+}
+#create_button:active {
+    transform: translateY(4px);
+    transition: 0.5s;
+  }
+
+#drop_wrap ul{
+    background: #FABBF9 ;
+    opacity: 0.8;
+    box-shadow: 3px 4px 8px;
+    padding: 0;
+}
+#drop_wrap ul li a{
+    padding: 5px 8px;
+}
+
+/* sidebar */
+#side_bar {
+    background: black transparent;
+}
+#side_bar li{
+    background:black ;
+    padding: 15px;
+    /* opacity: 0.4; */
+    box-shadow: 3px 4px 8px;
+    border: none;
+}
+#side_bar li:hover a{
+    color: red;
+}
+#side_bar li a{
+    color: white;
+}
+
+
+

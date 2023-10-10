@@ -12,7 +12,7 @@
 
 <body>
     @include('layout.nav')
-    @yield('content');
+    @yield('content')
     <script src="{{asset('/js/app.js')}}"></script>
 </body>
 
