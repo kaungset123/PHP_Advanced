@@ -18,7 +18,7 @@ class Session{
     public static function remove($key){
         if(self::has($key)){
             unset($_SESSION[$key]);
-            echo "remove success";
+
         }
     }
 

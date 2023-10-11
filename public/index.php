@@ -5,6 +5,7 @@ use Whoops\Handler\PrettyPageHandler;
 use Whoops\Run;
 use App\classes\Mail;
 use App\classes\Session;
+use App\classes\ValidateRequest;
 use Illuminate\Database\Capsule\Manager as Capsule;
 require_once "../bootstrap/init.php";
 
@@ -44,10 +45,33 @@ $data = [
 //     echo "<h1>mail sending fail</h1>";
 // uoyp xkzg smqy hsnz
 
-Session::remove("token");
+// Session::remove("token");
 // Session::add("name","testerrr");
 // Session::get("name");
 // Session::replace("name","testerrr03");
 // Session::get("name");
 
 // Session::flash("creat_success");
+
+
+##### Validation Test ########  
+// $data=[
+//     "name"=>"Jack frankin",
+//     "age"=>2,
+//     "email"=>"Jack@gmail.com"
+// ];
+
+// $policy=[
+//     "name"=>["string"=>true,"minLength"=>"5"],
+//     "age"=>["number"=>true,"minLength"=>"2"],
+//     "email"=>["email"=>true,"maxLength"=>"25"]
+// ];
+
+// $validator = new ValidateRequest();
+// $con = $validator->checkValidate($data,$policy);
+
+// if($validator->hasError()){
+//     beautify($validator->getError());
+// }else{
+//     echo "Good to go";
+// }

@@ -19,7 +19,17 @@ body{
 #nav_div{
     border-bottom: 0.5px solid white;
 }
-
+#nav_div li {
+    border-right: 2px solid black;
+}
+#nav_div li a{
+    padding: 0;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+#nav_div li:hover a{
+    color: white;
+}
 nav{
     padding: 16px !important;
 }
@@ -42,23 +52,24 @@ nav{
     box-shadow: 3px 4px 8px;
     padding: 0;
 }
+#drop_wrap ul li{
+    border-right: none;
+}
 #drop_wrap ul li a{
     padding: 5px 8px;
 }
 
 /* sidebar */
-#side_bar {
-    background: black transparent;
-}
+
 #side_bar li{
-    background:black ;
+    background:black !important ;
     padding: 15px;
-    /* opacity: 0.4; */
+    opacity: 0.7;
     box-shadow: 3px 4px 8px;
     border: none;
 }
 #side_bar li:hover a{
-    color: red;
+    color: #d1dd23;
 }
 #side_bar li a{
     color: white;

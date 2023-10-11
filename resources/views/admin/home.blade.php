@@ -3,7 +3,7 @@
 @section('title',"Admin Home")
 
 @section ('content')
-    <h1>Welcome back Admin</h1>
+
     <div class="container">
         <div class="row">
             <div class="col-md-3">

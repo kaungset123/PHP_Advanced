@@ -1,7 +1,7 @@
 <?php $__env->startSection('title',"Admin Home"); ?>
 
 <?php $__env->startSection('content'); ?>
-    <h1>Welcome back Admin</h1>
+
     <div class="container">
         <div class="row">
             <div class="col-md-3">

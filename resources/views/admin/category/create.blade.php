@@ -10,7 +10,7 @@
         <h1 class=" text-center my-3 " id="cat">Create Category</h1>
         <?php
             use App\classes\Session;
-            Session::flash("attack") ;?>
+            // Session::flash("error") ;?>
             
             <form action="<?php 
             use App\classes\CSRFToken;
@@ -27,7 +27,7 @@
                 </div>
                 <input type="hidden" name="token" value="<?php CSRFToken::_token()?>">
                 <div class="float-end">
-                    <button type="submit" class="btn btn-sm text-white pb-2" id="create_button" style="box-shadow: 1px 2px 7px black; border:none;">Create</button>
+                    <button type="submit" class="btn btn-sm text-white pb-2" id="create_button" style="box-shadow: 1px 2px 7px black; border:none;padding-top:7px;">Create</button>
                 </div>
             </form>
         </div>
