@@ -48,7 +48,7 @@ class ValidateRequest{
 
     public function unique($column,$value,$table){ // checking user exits or not
         if($value != null && !empty(trim($value))){
-           return Capsule::table($table)->where($column,$value)->exists();
+           return !Capsule::table($table)->where($column,$value)->exists(); //if name exist=>return false // name notexist=>return true
         }
     }
 

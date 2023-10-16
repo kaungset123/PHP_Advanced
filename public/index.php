@@ -6,6 +6,7 @@ use Whoops\Run;
 use App\classes\Mail;
 use App\classes\Session;
 use App\classes\ValidateRequest;
+use App\controllers\CategoryController;
 use Illuminate\Database\Capsule\Manager as Capsule;
 require_once "../bootstrap/init.php";
 
@@ -75,3 +76,12 @@ $data = [
 // }else{
 //     echo "Good to go";
 // }
+
+
+### slug function from helper.php test
+
+// $orig = "Category@# One";
+// $slug = "category-one";
+// echo slug($orig);
+
+// paginate(5,10,"categories",new CategoryController());

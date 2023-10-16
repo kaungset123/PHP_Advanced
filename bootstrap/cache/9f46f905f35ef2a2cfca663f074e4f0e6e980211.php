@@ -1,7 +1,7 @@
 <div  id="nav_div" class="container-fluid p-0 "  >
     <nav class="navbar navbar-expand-lg " >
         <div class="container-fluid ">
-            <a class="navbar-brand text-white" href="/">
+            <a class="navbar-brand text-white" href="<?php echo URL_ROOT;?>">
                 <img src="<?php echo e(asset('/images/emoji.png')); ?>" width="40" height="40">
                 <span style="font-size: 20px;" >Smile Shopingu</span>
             </a>

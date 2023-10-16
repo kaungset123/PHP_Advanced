@@ -23,17 +23,22 @@ body{
     border-right: 2px solid black;
 }
 #nav_div li a{
+    color: black;
     padding: 0;
     margin-right: 1rem;
     margin-left: 1rem;
 }
-#nav_div li:hover a{
+/* #nav_div li:hover a{
     color: white;
-}
+    margin: 0;
+} */
 nav{
     padding: 16px !important;
 }
-
+#drop_list li a{
+    margin: 0;
+    color: black;
+}
 #create_button,#search_button{
     background: rgb(14, 14, 116);
 }
@@ -51,12 +56,14 @@ nav{
     opacity: 0.8;
     box-shadow: 3px 4px 8px;
     padding: 0;
+    
 }
 #drop_wrap ul li{
     border-right: none;
 }
 #drop_wrap ul li a{
     padding: 5px 8px;
+    margin: 0 ;
 }
 
 /* sidebar */
