@@ -17,7 +17,7 @@
 
     <script src="<?php echo URL_ROOT . "assets/js/app.js";?>"></script>
     <script src="<?php echo URL_ROOT . "assets/js/jquery.js";?>"></script>
-    @yield('script');
+    @yield('script')
 </body>
 <!-- {{asset('/css/app.css')}} -->
 <!-- {{asset('/js/app.js')}} -->

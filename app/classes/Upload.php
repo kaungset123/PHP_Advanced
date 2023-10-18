@@ -5,6 +5,7 @@ namespace App\classes;
 class Upload{
 
     protected $maxsize = 4000000;
+    protected $path;
 
     public  function getName($file,$name=""){
         if($name === ""){
@@ -28,6 +29,10 @@ class Upload{
         return in_array($ext,$validExt);
     }
 
+    public function getPath(){
+       return $this->path;
+    }
+
     public  function move($file,$file_name=""){
        $name = $this->getName($file);
        if($this->isImage($file)){
@@ -36,6 +41,7 @@ class Upload{
                 if(!is_dir($path)){
                      mkdir($path);
                 }
+                $this->path= URL_ROOT . "assets/uploads/" . $name; // to use when save in database 
                 $file_path = $path . $name ;
                 return move_uploaded_file($file->file->tmp_name,$file_path);       
             }else{
