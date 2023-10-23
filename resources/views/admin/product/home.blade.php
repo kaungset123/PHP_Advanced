@@ -46,7 +46,7 @@
                                         <th >{{$product->price}}</th>
                                         <td>
                                             <a href="<?php echo URL_ROOT . "admin/product/$product->id/edit";?>"><i class="fa fa-pencil-square-o text-primary"></i></a>
-                                            <a href=""><i class="fa fa-trash-o text-danger" aria-hidden="true"></i></a>
+                                            <a href="<?php echo URL_ROOT . "admin/product/$product->id/delete";?>"><i class="fa fa-trash-o text-danger" aria-hidden="true"></i></a>
                                         </td>
                                     </tr>
                                     @endforeach                  

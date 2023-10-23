@@ -17,6 +17,8 @@
 
     <script src="<?php echo URL_ROOT . "assets/js/app.js";?>"></script>
     <script src="<?php echo URL_ROOT . "assets/js/jquery.js";?>"></script>
+    <script src="<?php echo URL_ROOT . "assets/js/custom.js";?>"></script>
+
     <?php echo $__env->yieldContent('script'); ?>
 </body>
 <!-- <?php echo e(asset('/css/app.css')); ?> -->

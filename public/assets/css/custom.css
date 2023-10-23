@@ -83,5 +83,27 @@ nav{
     box-shadow: 3px 5px 10px;
 }
 
+#cart_mark{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: red;
+}
 
+/* cart */
+.cart_noti{
+    width: 5px;
+    height: 5px;
+    background: red;
+}
+.fa-minus {
+    color: red;
+}
+.fa-plus {
+    color: green;
+}
+
+#detail_price{
+    box-shadow: 1px 2px 7px black !important; 
+}
 

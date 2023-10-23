@@ -45,7 +45,6 @@ class CategoryController extends BaseController{
                 $errors = $validator->getError();
                 // beautify($errors);
 
-
                 $cate = Category::all()->count();
                 list($cats,$pages) = paginate(3,$cate,new Category());
                 $cats = json_decode(json_encode($cats)); // changing array to object data type
@@ -61,11 +60,15 @@ class CategoryController extends BaseController{
                if($con){
                 $success = "Category creation success";
 
+                $sub_cats = SubCategory::all();
+                $count =SubCategory::all()->count();
                 $cate = Category::all()->count();
+                list($sub_cats,$sub_pages) = paginate(3,$count, new SubCategory());
                 list($cats,$pages) = paginate(3,$cate,new Category());
                 $cats = json_decode(json_encode($cats)); // changing array to object data type
+                $sub_cats = json_decode(json_encode($sub_cats));
                 // beautify($cats);
-                view("admin/category/create",compact('cats','success','pages'));  // cats return array value
+                view("admin/category/create",compact('cats','success','pages','sub_cats','sub_pages'));  // cats return array value
                }else{
                 $errors = "Category creation fail";
                 $cate = Category::all()->count();
@@ -75,11 +78,7 @@ class CategoryController extends BaseController{
                 view("admin/category/create",compact('cats','errors','pages'));  // cats return array value
                }
 
-            //    if($category->save()){ // saving to database table
-            //         echo "category creation success";
-            //    }else{
-            //         echo "category creation fail";
-            //    }
+          
 
             }
         }else{

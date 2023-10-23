@@ -14,11 +14,13 @@
         "philo/laravel-blade": "^3.1",
         "illuminate/database": "^5.5",
         "phpmailer/phpmailer": "^6.8",
-        "filp/whoops": "^2.15",
         "nesbot/carbon": "^1.39",
-        "voku/pagination": "^4.0"
-    }
-    ,
+        "voku/pagination": "^4.0",
+        "stripe/stripe-php": "^13.0"
+    },
+    "require-dev": {
+        "filp/whoops": "^2.15"
+    },
     "config": {
         "allow-plugins": {
             "kylekatarnls/update-helper": true

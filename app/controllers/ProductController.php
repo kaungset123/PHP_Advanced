@@ -156,7 +156,8 @@ class ProductController extends BaseController{
                     // Redirect::to("home",compact("products")); // if saving success, head to product's home page
                     list($products,$pages) = paginate(4,count($products),new Product());
                     $products = json_decode(json_encode($products));
-                    view("admin/product/home",compact("products","pages"));
+                    // view("admin/product/home",compact("products","pages"));
+                    Redirect::to("/E-Commerce/public/admin/product/home",compact("products","pages"));
                 }else{
                     $errors = ["New product Edition Fail!"];
                     $products = Product::where('id',$id)->first();
@@ -170,6 +171,25 @@ class ProductController extends BaseController{
         }else{
             Session::flash("product_edit_fail","product edition fail");
             Redirect::to("admin/product/".$id."/edit"); 
+        }
+    }
+
+    public function delete($id){
+        $product = Product::where("id",$id)->first();
+        $img = $product->image;
+        $cut = "http://localhost/";        
+        $remove = realpath(str_replace($cut,'',$img));
+        // echo $remove;
+        if($remove){
+            unlink($remove);
+        }
+        $con = Product::destroy($id);
+        if($con){
+            Session::flash("product_insert_success","product deletion success");
+            Redirect::to("/E-Commerce/public/admin/product/home");
+        }else{
+            Session::flash("product_insert_success","product deletion fail");
+            Redirect::to("/E-Commerce/public/admin/product/home");
         }
     }
 }

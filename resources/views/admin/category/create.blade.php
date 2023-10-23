@@ -16,6 +16,7 @@
         cursor: pointer;
     }
 </style>
+
 <div class="container">
     <!-- <img src="{{asset('/images/coding.png')}}"> -->
     <div class="row">
@@ -96,7 +97,6 @@
                     {!! $sub_pages !!}
                 </div>
             <!-- Subcategory list end -->
-
         </div>
     </div>
 </div>

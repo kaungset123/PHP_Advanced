@@ -1,7 +1,12 @@
 <div  id="nav_div" class="container-fluid p-0 "  >
     <nav class="navbar navbar-expand-lg " >
         <div class="container-fluid ">
-            <a class="navbar-brand text-white" href="<?php echo URL_ROOT;?>">
+            <a class="navbar-brand text-white" href="<?php
+
+use App\classes\Auth;
+use App\classes\Session;
+
+ echo URL_ROOT;?>">
                 <img src="{{asset('/images/emoji.png')}}" width="40" height="40">
                 <span style="font-size: 20px;" >Smile Shopingu</span>
             </a>
@@ -11,19 +16,31 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active text-black" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active text-black" aria-current="page" href="<?php echo URL_ROOT;?>">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-black" href="<?php echo URL_ROOT . "admin";?>">Admin Panel</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="<?php echo URL_ROOT . "cart"?>"><i class="fa fa-cart-plus" aria-hidden="true"></i>
+                        <sup id="cart_count" style="font-size: 15px;color:white;">0</sup>
+                        </a>
+                    </li>
                     <li id="drop_wrap" class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
+                        <a class="nav-link dropdown-toggle text-black"  role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <?php  if(Auth::check()) :?>
+                                <?php echo Auth::user()->name ;?>
+                            <?php else:?>
+                                Member
+                            <?php  endif ;?>                           
                         </a>
                         <ul id="drop_list" class="dropdown-menu">
-                            <li><a class="dropdown-item text-black" href="#">Action</a></li>
-                            <li><a class="dropdown-item text-black" href="#">Another action</a></li>
-                            <li><a class="dropdown-item text-black" href="#">Something else here</a></li>
+                            <?php  if(Auth::check()) :?>
+                                <li><a class="dropdown-item text-black" href="<?php echo URL_ROOT . "user/logout";?>">Logout</a></li>
+                            <?php else:?>
+                                <li><a class="dropdown-item text-black" href="<?php echo URL_ROOT . "user/login";?>">Login</a></li>
+                                <li><a class="dropdown-item text-black" href="<?php echo URL_ROOT . "user/register";?>">Register</a></li>
+                            <?php  endif ;?>                    
                         </ul>
                     </li>
                     <li class="nav-item">
